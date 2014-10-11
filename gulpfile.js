@@ -65,7 +65,8 @@ gulp.task('develop', ['build'], function() {
 
 var deploy = require('gulp-gh-pages');
 
-gulp.task('deploy', function () {
+gulp.task('deploy', ['build'], function () {
+    console.log('DEPLOY');
     return gulp.src('./dist/**/*')
         .pipe(deploy());
 });
