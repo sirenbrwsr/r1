@@ -65,7 +65,7 @@ gulp.task('develop', ['build'], function() {
 
 var deploy = require('gulp-gh-pages');
 
-gulp.task('deploy', ['build'], function () {
+gulp.task('deploy', function () {
     console.log('DEPLOY1');
     var options = {message: "--skip-ci Update [timestamp]"};
     return gulp.src('./dist/**/*')
